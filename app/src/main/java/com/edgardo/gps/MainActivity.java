@@ -49,13 +49,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     public void stopGps() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         mManager.removeUpdates(this);
@@ -82,9 +75,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     startGPS();
                 }
                 else {
-
-                // permission denied, boo! Disable the
-                // functionality that depends on this permission.
             }
             return;
 
